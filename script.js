@@ -1,4 +1,5 @@
 // remember this reference https://codepen.io/videoaskhelp/pen/PoNrLqv?editors=1010
+console.log('new update')
 
 let widget = null
 let modal = null
@@ -18,7 +19,8 @@ window.addEventListener('load', () => {
   
   const callbacks = {
     //onLoadModal: ({element}) => {modal = element}
-    onLoadModal: console.log('abc')
+    onLoadModal: console.log('On load modal'),
+    onCloseWidget: console.log('On close widget')
   }
 
   window.videoask.loadEmbed(config, callbacks)
