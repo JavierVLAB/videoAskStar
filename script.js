@@ -1,5 +1,27 @@
 // remember this reference https://codepen.io/videoaskhelp/pen/PoNrLqv?editors=1010
-console.log('new update')
+console.log('22:52')
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+var myBtn = document.getElementById('showModal')
+
+myBtn.addEventListener("click",showModal)
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+
+function showModal(e) {
+  myModal.classList.toggle("hidden");
+
+  if (!myModal.classList.contains("hidden")) {
+      // Disable scroll
+      body.style.overflow = "hidden";
+  } else {
+      // Enable scroll
+      body.style.overflow = "auto";
+  }
+};
 
 let widget = null
 let modal = null
