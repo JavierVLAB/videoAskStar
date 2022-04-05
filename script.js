@@ -19,10 +19,13 @@ window.addEventListener('load', () => {
   
   const callbacks = {
     //onLoadModal: ({element}) => {modal = element}
-    onLoadModal: console.log('On load modal'),
-    onCloseWidget: console.log('On close widget')
+    onLoadModal: ({element}) => {
+      modal = element
+    }
   }
 
   window.videoask.loadEmbed(config, callbacks)
+  .then((element) => {widget = element})
 
 })
+
