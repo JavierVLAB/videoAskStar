@@ -1,12 +1,26 @@
-window.VIDEOASK_EMBED_CONFIG = {
-  "kind": "widget",
-  "url": "https://www.videoask.com/fn5pz0q1v",
-  "options": {
-    "widgetType": "VideoThumbnailExtraLarge",
-    "text": "Talk to me",
-    "backgroundColor": "#E26D5A",
-    "position": "bottom-right",
-    "dismissible": true
+// remember this reference https://codepen.io/videoaskhelp/pen/PoNrLqv?editors=1010
+
+let widget = null
+let modal = null
+
+window.addEventListener('load', () => {
+  const config = {
+    "kind": "widget",
+    "url": "https://www.videoask.com/fn5pz0q1v",
+    "options": {
+      "widgetType": "VideoThumbnailExtraLarge",
+      "text": "Talk to me",
+      "backgroundColor": "#E26D5A",
+      "position": "bottom-right",
+      "dismissible": true
+    }
   }
-}
   
+  const callbacks = {
+    //onLoadModal: ({element}) => {modal = element}
+    onLoadModal: console.log('abc')
+  }
+
+  window.videoask.loadEmbed(config, callbacks)
+
+})
