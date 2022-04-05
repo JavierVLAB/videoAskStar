@@ -69,11 +69,13 @@
         videoask.loadModal('https://www.videoask.com/fn5pz0q1v');
       
         //document.getElementById("backdrop").style.display = "block"
-        document.getElementById("exampleModal").style.zIndex = "200";
-        document.getElementById("exampleModal").style.display = "block"
-
-        document.getElementById("exampleModal").classList.add("show")
+        setTimeout(modal,8000)
         console.log('hola')
+      }
+      function modal() {
+        document.getElementById("exampleModal").style.display = "block"
+        document.getElementById("exampleModal").classList.add("show"),
+        document.getElementById("exampleModal").style.zIndex = "200";
       }
     </script>
     
