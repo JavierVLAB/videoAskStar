@@ -3,3 +3,8 @@ html, body {
   padding: 0;
   height: 100%;
 }
+
+.exampleModal {
+  position: absolute;
+  z-index: 1000000;
+}
