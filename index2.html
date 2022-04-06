@@ -12,24 +12,18 @@
   </head>
 
   <body>
-    <div class="container">
-      <button 
-        class="btn btn-danger p-3"
-        onclick="videoask.loadModal('https://www.videoask.com/fn5pz0q1v')"
-      >
-        Click this button to show the default modal
-      </button>
-    </div>
-
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" id="showModal">
-  Launch demo modal
-</button>
-
-
-
-    <!-- This script runs when the page loads and loads the modal when the hash is #videoask -->
-    <script src="script.js"></script>
-    <script src="https://www.videoask.it/embed/embed.js"></script>
-  </body>
+    <script>
+      window.VIDEOASK_EMBED_CONFIG = {
+        "kind": "widget",
+        "url": "https://www.videoask.com/f2e686p74",
+        "options": {
+          "widgetType": "VideoThumbnailExtraLarge",
+          "modalType": 'Side',
+          "text": "Let's get started",
+          "backgroundColor": "#FF3C4C",
+          "position": "top-right"
+        }
+      }
+      </script>
+      <script src="https://www.videoask.com/embed/embed.js"></script>
 </html>
